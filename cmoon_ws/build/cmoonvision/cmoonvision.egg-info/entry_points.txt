@@ -1,0 +1,3 @@
+[console_scripts]
+vision = cmoonvision.CmoonVision:main
+

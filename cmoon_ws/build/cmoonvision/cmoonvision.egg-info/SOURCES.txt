@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+cmoonvision/CmoonVision.py
+cmoonvision/__init__.py
+cmoonvision.egg-info/PKG-INFO
+cmoonvision.egg-info/SOURCES.txt
+cmoonvision.egg-info/dependency_links.txt
+cmoonvision.egg-info/entry_points.txt
+cmoonvision.egg-info/requires.txt
+cmoonvision.egg-info/top_level.txt
+cmoonvision.egg-info/zip-safe
+resource/cmoonvision
