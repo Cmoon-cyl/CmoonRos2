@@ -8,6 +8,13 @@
     <license>TODO: License declaration</license>
 
     <depend>rclpy</depend>
+    <depend>sensor_msgs</depend>
+    <depend>std_msgs</depend>
+    <depend>std_srvs</depend>
+    <depend>cv_bridge</depend>
+    <depend>ament_cmake</depend>
+    <depend>image_geometry</depend>
+    <depend>image_transport</depend>
 
     <test_depend>ament_copyright</test_depend>
     <test_depend>ament_flake8</test_depend>

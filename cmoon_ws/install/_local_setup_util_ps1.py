@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import sys
 
+
 FORMAT_STR_COMMENT_LINE = '# {comment}'
 FORMAT_STR_SET_ENV_VAR = 'Set-Item -Path "Env:{name}" -Value "{value}"'
 FORMAT_STR_USE_ENV_VAR = '$env:{name}'

@@ -1,1 +1,1 @@
-rclpy
+ament_cmake:cv_bridge:image_geometry:image_transport:rclpy:sensor_msgs:std_msgs:std_srvs
