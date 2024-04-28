@@ -12,6 +12,7 @@ RUN wget -O requirements.txt http://github.fishros.org/https://raw.githubusercon
     && pip install --no-cache-dir -r requirements.txt \
     && rm requirements.txt
 
+
 COPY . /home/cmoon
 
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc && \

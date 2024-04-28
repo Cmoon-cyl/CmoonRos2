@@ -10,6 +10,7 @@ from pathlib import Path
 def main():
     # 初始化
     weights = Path(__file__).resolve().parent.parent / "resource" / "weights" / "yolov8n-seg.pt"
+    print(weights)
     detector = Yolo(weights)
 
     # 摄像头检测
