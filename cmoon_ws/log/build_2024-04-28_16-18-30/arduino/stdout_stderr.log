@@ -1,0 +1,24 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating arduino.egg-info
+writing arduino.egg-info/PKG-INFO
+writing dependency_links to arduino.egg-info/dependency_links.txt
+writing entry points to arduino.egg-info/entry_points.txt
+writing requirements to arduino.egg-info/requires.txt
+writing top-level names to arduino.egg-info/top_level.txt
+writing manifest file 'arduino.egg-info/SOURCES.txt'
+reading manifest file 'arduino.egg-info/SOURCES.txt'
+writing manifest file 'arduino.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/python3.10/site-packages/arduino.egg-link (link to .)
+Installing arduino script to /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/arduino
+
+Installed /home/cmoon/CmoonRos2/cmoon_ws/build/arduino
+running symlink_data
+creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index
+creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index
+creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index/packages
+symbolically linking /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/resource/arduino -> /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index/packages
+symbolically linking /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/package.xml -> /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/arduino

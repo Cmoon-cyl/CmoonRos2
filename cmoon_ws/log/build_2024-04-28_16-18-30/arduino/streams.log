@@ -1,0 +1,26 @@
+[0.740s] Invoking command in '/home/cmoon/CmoonRos2/cmoon_ws/build/arduino': PYTHONPATH=/home/cmoon/CmoonRos2/cmoon_ws/build/arduino/prefix_override:/home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/build --no-deps symlink_data
+[0.932s] running develop
+[0.933s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.933s]   warnings.warn(
+[1.053s] running egg_info
+[1.054s] creating arduino.egg-info
+[1.054s] writing arduino.egg-info/PKG-INFO
+[1.054s] writing dependency_links to arduino.egg-info/dependency_links.txt
+[1.054s] writing entry points to arduino.egg-info/entry_points.txt
+[1.054s] writing requirements to arduino.egg-info/requires.txt
+[1.054s] writing top-level names to arduino.egg-info/top_level.txt
+[1.054s] writing manifest file 'arduino.egg-info/SOURCES.txt'
+[1.055s] reading manifest file 'arduino.egg-info/SOURCES.txt'
+[1.056s] writing manifest file 'arduino.egg-info/SOURCES.txt'
+[1.056s] running build_ext
+[1.057s] Creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/python3.10/site-packages/arduino.egg-link (link to .)
+[1.057s] Installing arduino script to /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/arduino
+[1.057s] 
+[1.057s] Installed /home/cmoon/CmoonRos2/cmoon_ws/build/arduino
+[1.058s] running symlink_data
+[1.058s] creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index
+[1.058s] creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index
+[1.058s] creating /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index/packages
+[1.058s] symbolically linking /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/resource/arduino -> /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/ament_index/resource_index/packages
+[1.058s] symbolically linking /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/package.xml -> /home/cmoon/CmoonRos2/cmoon_ws/install/arduino/share/arduino
+[1.089s] Invoked command in '/home/cmoon/CmoonRos2/cmoon_ws/build/arduino' returned '0': PYTHONPATH=/home/cmoon/CmoonRos2/cmoon_ws/build/arduino/prefix_override:/home/cmoon/CmoonRos2/cmoon_ws/install/arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/cmoon/CmoonRos2/cmoon_ws/build/arduino/build --no-deps symlink_data

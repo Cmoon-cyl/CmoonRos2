@@ -1,0 +1,1 @@
+Invoking command in '/home/cmoon/cmoon_ws/build/arduino': PYTHONPATH=/home/cmoon/cmoon_ws/install/arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/cmoon/cmoon_ws/install/arduino --uninstall --editable --build-directory /home/cmoon/cmoon_ws/build/arduino/build
