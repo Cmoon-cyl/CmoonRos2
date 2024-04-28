@@ -1,3 +1,0 @@
-[console_scripts]
-arduino = arduino.Arduino:main
-
