@@ -1,0 +1,21 @@
+[0.453s] Invoking command in '/home/cmoon/cmoon_ws/build/cmoonvision': PYTHONPATH=/home/cmoon/cmoon_ws/install/cmoonvision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/cmoon/cmoon_ws/install/cmoonvision --editable --build-directory /home/cmoon/cmoon_ws/build/cmoonvision/build --no-deps install_data --install-dir /home/cmoon/cmoon_ws/install/cmoonvision
+[0.629s] running develop
+[0.629s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.629s]   warnings.warn(
+[0.630s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.631s]   warnings.warn(
+[0.743s] running egg_info
+[0.743s] writing cmoonvision.egg-info/PKG-INFO
+[0.743s] writing dependency_links to cmoonvision.egg-info/dependency_links.txt
+[0.743s] writing entry points to cmoonvision.egg-info/entry_points.txt
+[0.743s] writing requirements to cmoonvision.egg-info/requires.txt
+[0.743s] writing top-level names to cmoonvision.egg-info/top_level.txt
+[0.745s] reading manifest file 'cmoonvision.egg-info/SOURCES.txt'
+[0.745s] writing manifest file 'cmoonvision.egg-info/SOURCES.txt'
+[0.773s] running build_ext
+[0.773s] Creating /home/cmoon/cmoon_ws/install/cmoonvision/lib/python3.10/site-packages/cmoonvision.egg-link (link to .)
+[0.774s] Installing vision script to /home/cmoon/cmoon_ws/install/cmoonvision/lib/cmoonvision
+[0.774s] 
+[0.774s] Installed /home/cmoon/cmoon_ws/build/cmoonvision
+[0.774s] running install_data
+[0.793s] Invoked command in '/home/cmoon/cmoon_ws/build/cmoonvision' returned '0': PYTHONPATH=/home/cmoon/cmoon_ws/install/cmoonvision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/cmoon/cmoon_ws/install/cmoonvision --editable --build-directory /home/cmoon/cmoon_ws/build/cmoonvision/build --no-deps install_data --install-dir /home/cmoon/cmoon_ws/install/cmoonvision

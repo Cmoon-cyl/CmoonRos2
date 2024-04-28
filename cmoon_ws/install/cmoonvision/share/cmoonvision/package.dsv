@@ -1,9 +1,0 @@
-source;share/cmoonvision/hook/pythonpath.ps1
-source;share/cmoonvision/hook/pythonpath.dsv
-source;share/cmoonvision/hook/pythonpath.sh
-source;share/cmoonvision/hook/ament_prefix_path.ps1
-source;share/cmoonvision/hook/ament_prefix_path.dsv
-source;share/cmoonvision/hook/ament_prefix_path.sh
-source;../../build/cmoonvision/share/cmoonvision/hook/pythonpath_develop.ps1
-source;../../build/cmoonvision/share/cmoonvision/hook/pythonpath_develop.dsv
-source;../../build/cmoonvision/share/cmoonvision/hook/pythonpath_develop.sh
