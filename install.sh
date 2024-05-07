@@ -120,10 +120,4 @@ if ! grep -q "export PATH=\$PATH:$user_home/.cmoon/bin/" $user_home/.bashrc; the
     echo "export PATH=\$PATH:$user_home/.cmoon/bin/" >> $user_home/.bashrc
 fi
 
-# 向 .bashrc 添加 ros source 命令
-source_command="source $local_dir/cmoon_ws/install/setup.bash"
-if ! grep -q "$source_command" $user_home/.bashrc; then
-    echo "$source_command" >> $user_home/.bashrc
-fi
-
 echo "Install Complete."

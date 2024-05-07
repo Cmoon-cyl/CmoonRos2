@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 if [ -z "$SUDO_USER" ]; then
     user_home="$HOME"  # 如果没有使用 sudo，使用当前用户的 HOME
@@ -9,11 +8,10 @@ fi
 
 echo "userhome:$user_home"
 # 定义路径
-local_dir="$user_home/CmoonRos3"
+local_dir="$user_home/CmoonRos2"
 container_dir="/home/cmoon/cmoon_ws"
 docker_image="cmooncyl/ustc1010:cmoonros2"
-script_path="$user_home/.cmoon/bin/cmoonros3"
-
+script_path="$user_home/.cmoon/bin/cmoonros2"
 
 # install nvidia docker
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
@@ -82,7 +80,7 @@ docker rm -f $container_id
 echo "cmoon_ws folder copied to $local_dir."
 
 # 创建新容器并挂载 cmoon_ws 文件夹
-if ! docker run --ipc=host --gpus all -dit --name=cmoonros3 --privileged \
+if ! docker run --ipc=host --gpus all -dit --name=cmoonros2 --privileged \
 -v /dev:/dev \
 -v $local_dir:/home/cmoon:Z \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -103,12 +101,12 @@ xhost +local: >> /dev/null
 echo "请输入指令控制humble: 重启(r) 进入(e) 启动(s) 关闭(c) 删除(d) 测试(t):"
 read choose
 case $choose in
-    s) docker start cmoonros3;;
-    r) docker restart cmoonros3;;
-    e) docker exec -it cmoonros3 /bin/bash;;
-    c) docker stop cmoonros3;;
-    d) docker stop cmoonros3 && docker rm cmoonros3;;
-    t) docker exec -it cmoonros3 /bin/bash -c "source /ros_entrypoint.sh && ros2";;
+    s) docker start cmoonros2;;
+    r) docker restart cmoonros2;;
+    e) docker exec -it cmoonros2 /bin/bash;;
+    c) docker stop cmoonros2;;
+    d) docker stop cmoonros2 && docker rm cmoonros2;;
+    t) docker exec -it cmoonros2 /bin/bash -c "source /ros_entrypoint.sh && ros2";;
 esac
 newgrp docker
 EOF
@@ -117,12 +115,12 @@ EOF
 [ ! -z "$SUDO_USER" ] && sudo chown -R $SUDO_USER:$SUDO_USER "$user_home/.cmoon"
 chmod +x "$script_path"
 
-# 将新的 bin 目录添加到 PATH
-if ! grep -q "export PATH=\$PATH:$user_home/.cmoon/bin/" $user_home/.zshrc; then
-    echo "export PATH=\$PATH:$user_home/.cmoon/bin/" >> $user_home/.zshrc
+# 将脚本添加到 PATH
+if ! grep -q "export PATH=\$PATH:$user_home/.cmoon/bin/" $user_home/.bashrc; then
+    echo "export PATH=\$PATH:$user_home/.cmoon/bin/" >> $user_home/.bashrc
 fi
 
-# 向 .bashrc 添加 source 命令
+# 向 .bashrc 添加 ros source 命令
 source_command="source $local_dir/cmoon_ws/install/setup.bash"
 if ! grep -q "$source_command" $user_home/.bashrc; then
     echo "$source_command" >> $user_home/.bashrc
