@@ -8,13 +8,19 @@ RUN apt-get update && apt-get install -y python3-pip vim wget \
     && rm -rf /var/lib/apt/lists/* \
     && update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
-COPY . /home/cmoon
-
 RUN wget -O requirements.txt http://github.fishros.org/https://raw.githubusercontent.com/Cmoon-cyl/CmoonRos2/master/requirements.txt \
     && pip install --no-cache-dir -r requirements.txt \
-    && rm requirements.txt
+    && rm requirements.txt \
+
+
+WORKDIR /home/cmoon/CmoonRos2/cmoon_ws/src/controller/resource/weights
+RUN wget -O yolov8n.pt https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt && \
+    wget -O yolov8n-seg.pt https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n-seg.pt \
 
 WORKDIR /home/cmoon/cmoon_ws
+RUN sudo rm -rf install/*  && sudo rm -rf build/* && sudo rm -rf log/* && colcon build --symlink-install
+WORKDIR /home/cmoon
+
 RUN sudo rm -r /install*  colcon build --symlink-install
 WORKDIR /home/cmoon
 

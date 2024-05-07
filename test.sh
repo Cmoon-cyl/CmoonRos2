@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 if [ -z "$SUDO_USER" ]; then
     user_home="$HOME"  # 如果没有使用 sudo，使用当前用户的 HOME
@@ -6,12 +7,39 @@ else
     user_home="/home/$SUDO_USER"  # 如果使用了 sudo，获取原始用户的 HOME
 fi
 
-echo "userhome:$user_home "
+echo "userhome:$user_home"
 # 定义路径
 local_dir="$user_home/CmoonRos3"
 container_dir="/home/cmoon/cmoon_ws"
 docker_image="cmooncyl/ustc1010:cmoonros2"
 script_path="$user_home/.cmoon/bin/cmoonros3"
+
+
+# install nvidia docker
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+
+echo "Adding the NVIDIA container toolkit repository..."
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+# Update the package list
+echo "Updating the apt package list..."
+sudo apt update
+
+# Install the NVIDIA container toolkit
+echo "Installing the NVIDIA container toolkit..."
+sudo apt-get install -y nvidia-container-toolkit
+
+# Configure the NVIDIA Container Toolkit
+echo "Configuring the NVIDIA Container Toolkit..."
+sudo nvidia-ctk runtime configure --runtime=docker
+
+# Restart the Docker service
+echo "Restarting the Docker service..."
+sudo systemctl restart docker
+
+echo "NVIDIA container toolkit installation and configuration complete."
 
 # 拉取 Docker 镜像
 if ! docker pull $docker_image; then
